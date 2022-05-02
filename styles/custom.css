@@ -45,3 +45,13 @@ p.venue {
 cite {
   font-style: italic;
 }
+
+.faded {
+  opacity: .2;
+  filter: contrast(1.1);
+}
+
+#solid img {
+  margin-top: 60px;
+  height: 500px;
+}
