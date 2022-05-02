@@ -46,6 +46,10 @@ cite {
   font-style: italic;
 }
 
+del {
+  text-decoration: solid line-through var(--accent) 7%;
+}
+
 .faded {
   opacity: .2;
   filter: contrast(1.1);
