@@ -26,9 +26,9 @@ p.venue {
 }
 
 .text.slide p {
-  font-size: 1.2em;
+  font-size: 1.6em;
   line-height: 1.5;
-  margin: 3em 0 1.5em;
+  margin: 4em 0 1.5em;
   font-weight: bold;
   color: var(--accent);
 }
@@ -38,8 +38,8 @@ p.venue {
   width: 88%
 }
 
-.toc.slide ul > li.current {
-  letter-spacing: -.75px;
+.toc.slide ul {
+  margin-left: 0;
 }
 
 cite {
