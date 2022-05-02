@@ -38,6 +38,10 @@ p.venue {
   width: 88%
 }
 
+.toc.slide ul > li.current {
+  letter-spacing: -.75px;
+}
+
 cite {
   font-style: italic;
 }
