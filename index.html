@@ -45,7 +45,7 @@
   <div class="text slide" id="question">
     <p>
       How can Web clients interact with<br>
-      decentralized knowledge graphs?
+      <em>decentralized</em> knowledge graphs?
     </p>
   </div>
 
@@ -152,10 +152,10 @@
         </ol>
       </li>
       <li class="next">
-        Every API enables some kind of selection.
+        Every API enables filtered data access.
         <ul>
           <li>
-            The difference is the granularity.
+            The difference is the <em>granularity</em>.
           </li>
         </ul>
       </li>
@@ -190,6 +190,9 @@
       <li class="next">
         Observations for single Web APIs<br>
         don’t always generalize to multiple APIs.
+        <ul>
+          <li>Cross-API queries are fundamentally different.</li>
+        </ul>
       </li>
     </ul>
   </div>
@@ -205,7 +208,7 @@
   <div class="slide" id="solid">
     <h2>
       On the decentralized Web of the future,<br>
-      every person will have their own <em>data pod</em>.
+      every person has their own <em>data pod</em>.
     </h2>
     <ul>
       <li class="next">
@@ -215,8 +218,9 @@
         </ul>
       </li>
       <li class="next">
-        <a href="https://solidproject.org/">Solid</a> brings standards for personal data pods.
+        <a href="https://solidproject.org/">Solid</a> brings Web standards for personal data pods.
         <ul>
+          <li>People store their data behind access control.</li>
           <li>Any piece of data can link to any other.</li>
         </ul>
       </li>
@@ -235,7 +239,7 @@
 
   <div class="slide" id="abstract-knowledge">
     <h2>
-      Decentralized applications need<br>
+      Decentralized applications need <em>query</em>:<br>
       read/write access to a knowledge graph.
     </h2>
     <figure class="cover width margin">
@@ -245,8 +249,8 @@
 
   <div class="slide" id="abstract-transfer">
     <h2>
-      The graph is too big for <em>any</em> single place,<br>
-      so apps reconstruct the whole via parts.
+      Too big and complex for any single app,<br>
+      the full graph is <em>emulated</em> via small parts.
     </h2>
     <figure class="cover width margin">
       <img src="images/abstract-transfer.svg" alt="[apps operate parts of the knowledge graph]"/>
@@ -255,8 +259,8 @@
 
   <div class="slide" id="single-knowledge-api">
     <h2>
-      When knowledge fits in a single source,<br>
-      we can place an API in front of it.
+      Access to single-source knowledge parts<br>
+      can be provided through a <em>Web API</em>.
     </h2>
     <figure class="cover width margin">
       <img src="images/single-knowledge-api.svg" alt="[accessing knowledge hosted on a single server]"/>
@@ -265,8 +269,8 @@
 
   <div class="slide" id="single-json-api">
     <h2>
-      Abstract knowledge needs to be exposed<br>
-      through concrete documents/resources.
+      <em>Document-oriented</em> Web APIs pretend<br>
+      the graph is structured across documents.
     </h2>
     <figure class="cover width margin">
       <img src="images/single-json-api.svg" alt="[accessing knowledge through a single JSON API]"/>
@@ -275,8 +279,8 @@
 
   <div class="slide" id="single-graphql-api">
     <h2>
-      A GraphQL API combines data from across<br>
-      multiple resources of the “main” API.
+      <em>Query-oriented</em> Web APIs combine data<br>
+      of many documents of a document API.
     </h2>
     <figure class="cover width margin">
       <img src="images/single-graphql-api.svg" alt="[GraphQL APIs can access multiple conceptual resources]"/>
@@ -285,8 +289,8 @@
 
   <div class="slide" id="multi-source-knowledge">
     <h2>
-      Let's revisit the story for cases where<br>
-      knowledge cannot fit in one place.
+      Let’s examine the consequences of<br>
+      <em>decentralizing</em> the knowledge graph.
     </h2>
     <figure class="cover width margin">
       <img src="images/multi-source-knowledge.svg" alt="[an application needs to access a knowledge graph that is distributed across multiple servers]"/>
@@ -295,8 +299,8 @@
 
   <div class="slide" id="multi-source-apis">
     <h2>
-      Each data pod exposes its part<br>
-      as Linked Data through a Web API.
+      Every source exposes its part of the graph<br>
+      through a <em>Linked Data</em> Web API.
     </h2>
     <figure class="cover width margin">
       <img src="images/multi-source-apis.svg" alt="[each server exposes an RDF API]"/>
@@ -305,8 +309,8 @@
 
   <div class="slide" id="heterogeneous-apis">
     <h2>
-      Different APIs for Linked Data<br>
-      have different characteristics.
+      Several <em>different</em> Linked Data APIs exist,<br>
+      each with vastly different characteristics.
     </h2>
     <figure class="cover width margin">
       <img src="images/heterogeneous-apis.svg" alt="[RDF can be exposed through different APIs]"/>
@@ -315,8 +319,8 @@
 
   <div class="slide" id="heterogeneous-multi-apis">
     <h2>
-      It quickly becomes unfeasible for apps<br>
-      to deal with all possible API combinations.
+      Each source can expose its same graph<br>
+      through <em>multiple</em> different APIs.
     </h2>
     <figure class="cover width margin">
       <img src="images/heterogeneous-multi-apis.svg" alt="[each server might expose the same knowledge through multiple APIs]"/>
@@ -325,8 +329,8 @@
 
   <div class="slide" id="graphql-multi-apis">
     <h2>
-      A GraphQL Web API cannot help us,<br>
-      since there's no server to attach it to.
+      No <em>single</em> query-oriented API can help us,<br>
+      since there is no single server to attach to.
     </h2>
     <figure class="cover width margin">
       <img src="images/graphql-multi-apis.svg" alt="[we cannot attach a GraphQL API to any single server when the data resides in multiple servers]"/>
@@ -335,8 +339,8 @@
 
   <div class="slide" id="graphql-client-side">
     <h2>
-      The app can still be written with GraphQL:<br>
-      a library translates it into HTTP requests.
+      The app can <em>still</em> be written using queries:<br>
+      a library translates into HTTP requests.
     </h2>
     <figure class="cover width margin">
       <img src="images/graphql-client-side.svg" alt="[a client-side library translates GraphQL queries from the app into HTTP requests for different APIs and servers]"/>
