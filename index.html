@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Reflections of knowledge: Web APIs for decentralized knowledge graphs</title>
+  <title>Reflections of knowledge: Web APIs for decentralized knowledge graphs</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
@@ -12,7 +12,7 @@
   <header class="caption">
     <h1>
       Reflections of knowledge:<br>
-      <em>Web APIs for decentralized knowledge graphs</em>
+      <em>Web APIs for decentralized knowledge graphs</em>
     </h1>
     <p>
       <a href="https://ruben.verborgh.org/">Ruben Verborgh</a>,
@@ -31,7 +31,7 @@
 
   <div class="title slide" id="title">
     <h2>Reflections of knowledge</h2>
-    <h3>Web APIs for decentralized knowledge graphs</h3>
+    <h3>Web APIs for decentralized knowledge graphs</h3>
     <p class="author">Ruben Verborgh</p>
     <p class="affiliation">Ghent University – imec</p>
   </div>
@@ -51,12 +51,12 @@
 
   <div class="text slide" id="multiple-apis">
     <p>
-      The sum of multiple knowledge graphs<br>
-      is an even bigger knowledge graph.
+      <span class="next">The sum of</span> multiple knowledge graphs<br>
+      <span class="next">is an even bigger knowledge graph.</span>
     </p>
-    <p class="next">
-      The sum of multiple Web APIs<br>
-      <span class="next">is an even bigger <span class="next">mess.</span></span>
+    <p>
+      <span class="next">The sum of</span> multiple Web APIs<br>
+      <span class="next">is an even bigger <span class="next">mess</span>.</span>
     </p>
   </div>
 
@@ -78,12 +78,12 @@
 
   <div class="slide" id="web-apis">
     <h2>
-      Web APIs provide access to<br>
+      Web APIs provide access to<br>
       remote data or functionality.
     </h2>
     <ol>
       <li class="next">
-        action-oriented APIs
+        action-oriented Web APIs
         <ul class="inline">
           <li>RPC</li>
           <li>SOAP</li>
@@ -92,7 +92,7 @@
         </ul>
       </li>
       <li class="next">
-        document-oriented APIs
+        document-oriented Web APIs
         <ul class="inline">
           <li>REST APIs</li>
           <li>LDP</li>
@@ -100,7 +100,7 @@
         </ul>
       </li>
       <li class="next">
-        graph-oriented APIs
+        graph-oriented Web APIs
         <ul class="inline">
           <li>GraphQL</li>
           <li>SPARQL</li>
@@ -108,9 +108,6 @@
         </ul>
       </li>
     </ol>
-    <p class="next">
-      Graph APIs are just a specific kind of document APIs.
-    </p>
   </div>
 
   <div class="slide" id="common-misconceptions">
@@ -139,12 +136,12 @@
         <q>GraphQL</q> points to 2 distinct concepts:
         <ol>
           <li>a read/write query language</li>
-          <li>a Web API for processing such queries</li>
+          <li>a Web API for processing such queries</li>
         </ol>
       </li>
       <li class="next">
         Client libraries can provide GraphQL queries<br>
-        over non-GraphQL Web APIs.
+        over non-GraphQL Web APIs.
       </li>
     </ul>
   </div>
@@ -158,8 +155,8 @@
       <li>
         Which API is a query API?
         <ol>
-          <li><code>/orders?id=5787</code></li>
-          <li><code>/graphql?query={order(id:5787){product}}</code></li>
+          <li><code>/orders<strong>?id=5787</strong></code></li>
+          <li><code>/graphql<strong>?query={order(id:5787){product}}</strong></code></li>
         </ol>
       </li>
       <li class="next">
@@ -183,7 +180,7 @@
 
   <div class="slide" id="no-universal-api">
     <h2>
-      No single universal Web API exists<br>
+      No single universal Web API exists<br>
       to satisfy all use cases.
     </h2>
     <ul>
@@ -192,14 +189,14 @@
         the more client-specific requests can be.
       </li>
       <li class="next">
-        Web API design involves trade-offs.
+        Web API design involves trade-offs.
         <ul>
           <li>Low expressivity leads to higher <em>numbers</em> of requests.</li>
           <li>High expressivity leads to higher per-request <em>cost</em>.</li>
         </ul>
       </li>
       <li class="next">
-        Observations for single Web APIs<br>
+        Observations for single Web APIs<br>
         don’t always generalize to multiple APIs.
         <ul>
           <li>Cross-API queries are fundamentally different.</li>
@@ -232,7 +229,7 @@
         <a href="https://solidproject.org/">Solid</a> brings Web standards for personal data pods.
         <ul>
           <li>People store their data behind access control.</li>
-          <li>Any piece of data can link to any other.</li>
+          <li>Linked Data lets any piece of data to connect to any other.</li>
         </ul>
       </li>
       <li class="next">
@@ -250,17 +247,27 @@
 
   <div class="slide" id="data-pod">
     <h2>
-      Every piece of data created <em>by</em> a person<br>
-      or <em>about</em> them, is stored in a data pod.
+      Data created <em>by</em> or <em>about</em> a person will be<br>
+      stored in their personal knowledge graph.
     </h2>
     <figure class="cover width margin">
       <img src="images/data-pods.svg" alt="">
     </figure>
   </div>
 
+  <div class="slide" id="decentralized-data">
+    <h2>
+      Apps over decentralized knowledge graphs<br>
+      need to blend data from many sources.
+    </h2>
+    <figure class="cover height margin">
+      <img src="images/decentralized-data.svg" alt="">
+    </figure>
+  </div>
+
   <div class="slide" id="abstract-knowledge">
     <h2>
-      Decentralized applications need <em>query</em>:<br>
+      Decentralized apps require <em>query</em>:<br>
       read/write access to a knowledge graph.
     </h2>
     <figure class="cover width margin">
@@ -281,7 +288,7 @@
   <div class="slide" id="single-knowledge-api">
     <h2>
       Access to single-source knowledge parts<br>
-      can be provided through a <em>Web API</em>.
+      can be provided through a <em>Web API</em>.
     </h2>
     <figure class="cover width margin">
       <img src="images/single-knowledge-api.svg" alt="[accessing knowledge hosted on a single server]"/>
@@ -290,7 +297,7 @@
 
   <div class="slide" id="single-json-api">
     <h2>
-      <em>Document-oriented</em> Web APIs pretend<br>
+      <em>Document-oriented</em> Web APIs pretend<br>
       the graph is structured across documents.
     </h2>
     <figure class="cover width margin">
@@ -300,7 +307,7 @@
 
   <div class="slide" id="single-graphql-api">
     <h2>
-      <em>Query-oriented</em> Web APIs combine data<br>
+      <em>Query-oriented</em> Web APIs combine data<br>
       of many documents of a document API.
     </h2>
     <figure class="cover width margin">
@@ -321,7 +328,7 @@
   <div class="slide" id="multi-source-apis">
     <h2>
       Every source exposes its part of the graph<br>
-      through a <em>Linked Data</em> Web API.
+      through a <em>Linked Data</em> Web API.
     </h2>
     <figure class="cover width margin">
       <img src="images/multi-source-apis.svg" alt="[each server exposes an RDF API]"/>
@@ -341,7 +348,7 @@
   <div class="slide" id="heterogeneous-multi-apis">
     <h2>
       Each source can expose its same graph<br>
-      through <em>multiple</em> different APIs.
+      through <em>multiple</em> different Web APIs.
     </h2>
     <figure class="cover width margin">
       <img src="images/heterogeneous-multi-apis.svg" alt="[each server might expose the same knowledge through multiple APIs]"/>
@@ -383,12 +390,12 @@
     </h2>
     <ul>
       <li class="next">
-        Apps without query bind to specific Web APIs<br>
+        Apps without query bind to specific Web APIs<br>
         rather than their underlying knowledge graphs.
         <ul>
           <li>
             They hardcode assumptions of where data is located<br>
-            and how one API structures that data.
+            and how any specific API structures that data.
           </li>
         </ul>
       </li>
@@ -411,18 +418,18 @@
       from <em>API</em> integration to <em>data</em> integration.
     </h2>
     <ul>
-      <li>
+      <li class="next">
         Current multi-source Web apps depend<br>
-        on hardcoding Web API integrations.
+        on hardcoding Web API integrations.
         <ul>
           <li>Extensive client-side API tooling is available to do so.</li>
         </ul>
       </li>
-      <li>
+      <li class="next">
         The central assumption in the transition is that<br>
         data integration is easier to solve sustainably.
       </li>
-      <li>
+      <li class="next">
         However, this means we need to invest<br>
         in client-side <em>data integration</em> tooling.
       </li>
@@ -439,27 +446,27 @@
 
   <div class="slide" id="conclusion">
     <h2>
-      Web APIs are a means to an end: <span class="next">we need<br>
+      Web APIs are a means to an end: <span class="next">we need<br>
       <em>client-side</em> knowledge graph tooling.</span>
     </h2>
     <ol class="next">
       <li>
-        Client and API abstractions can differ.
+        <span class="next">Client and API abstractions can differ.</span>
         <ul class="next">
           <li>Reusable client libraries separate the <em>what</em> from the <em>how</em>.</li>
         </ul>
       </li>
       <li>
-        Every Web API is a query API.
+        <span class="next">Every Web API is a query API.</span>
         <ul class="next">
           <li>
             Every Web client is a query client.<br>
-            <em>(whether you realize it or not)</em>
+            <em class="next">(whether you realize it or not)</em>
           </li>
         </ul>
       </li>
       <li>
-        No single Web API is the final answer.
+        <span class="next">No single Web API is the final answer.</span>
         <ul class="next">
           <li>
             Design APIs as part of an ecosystem:<br>
@@ -470,9 +477,15 @@
     </ol>
   </div>
 
+  <div class="slide" id="cave-end">
+    <figure class="cover width">
+      <img src="images/cave.webp" alt="[Plato's allegory of the cave]"/>
+    </figure>
+  </div>
+
   <div class="title slide" id="end">
     <h2>Reflections of knowledge</h2>
-    <h3>Web APIs for decentralized knowledge graphs</h3>
+    <h3>Web APIs for decentralized knowledge graphs</h3>
     <p class="author"><a href="https://twitter.com/RubenVerborgh">@RubenVerborgh</a></p>
     <p class="affiliation"><a href="https://ruben.verborgh.org/">ruben.verborgh.org</a></p>
   </div>

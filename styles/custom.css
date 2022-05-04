@@ -30,6 +30,7 @@ p.venue {
   flex-direction: column;
   align-content: center;
   flex-flow: row wrap;
+  padding-bottom: 1em;
 }
 
 .text.slide p {
@@ -42,8 +43,14 @@ p.venue {
 }
 
 .slide figure.cover.width.margin > :first-child {
-  margin-top: 2em;
   width: 88%
+}
+.slide h2 + figure.cover.margin > :first-child {
+  margin-top: 2em;
+}
+.slide h2 + figure.cover.height.margin > :first-child,
+.slide ul + figure.cover.height.margin > :first-child {
+  height: 75%;
 }
 
 .toc.slide ul {
