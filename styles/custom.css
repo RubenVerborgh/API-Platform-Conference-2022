@@ -25,10 +25,18 @@ p.venue {
   font-weight: normal;
 }
 
+.text.slide, .shower.full .text.slide.active {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-flow: row wrap;
+}
+
 .text.slide p {
-  font-size: 1.6em;
+  letter-spacing: -.01em;
+  font-size: 1.33em;
   line-height: 1.5;
-  margin: 4em 0 1.5em;
+  margin: .5em 0 .75em 40px;
   font-weight: bold;
   color: var(--accent);
 }
