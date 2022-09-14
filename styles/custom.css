@@ -13,16 +13,24 @@ p.venue {
 }
 
 .title.slide h2 {
-  font-size: 2.2em;
-  line-height: 1;
-  margin-bottom: -.25em;
+  margin-top: 60px;
+  font-size: 3.2em;
+  line-height: 1.1;
 }
-.title.slide h3 {
-  font-size: 1.38em;
-  font-style: italic;
-  line-height: 1;
-  margin-bottom: 2em;
+.title.slide h2 i {
+  margin: -.4em 0 0 -77px;
+  font-size: 8em;
   font-weight: normal;
+  position: absolute;
+  opacity: .5;
+}
+.title.slide p.author {
+  font-weight: bold;
+}
+.title.slide p.affiliation {
+  font-size: .77em;
+  font-style: normal !important;
+  letter-spacing: -.66px;
 }
 
 .text.slide, .shower.full .text.slide.active {
