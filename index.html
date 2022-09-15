@@ -536,6 +536,35 @@ LIMIT 10</code></pre>
     </ul>
   </div>
 
+  <div class="slide" id="api-as-a-service">
+    <h2>
+      Once we figure out the right core APIs,<br>
+      we can build auxiliary APIs for use cases.
+    </h2>
+    <ul>
+      <li class="next">
+        The duty of the source is to securely expose data<br>
+        for repurposing in different contexts.
+      </li>
+      <li class="next">
+        More specific APIs can satisfy many different uses.
+        <ul class="inline">
+          <li>autocompletion</li>
+          <li>indexing</li>
+          <li>history</li>
+          <li>…</li>
+        </ul>
+      </li>
+      <li class="next">
+        Dedicated <em>re-API</em> providers build on top of core APIs.
+        <ul>
+          <li>API as a service</li>
+          <li>dockerized &amp; reusable</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
   <div class="toc slide" id="recap">
     <ul>
       <li><a href="#toc-web-apis">Goodbye, query API</a></li>
