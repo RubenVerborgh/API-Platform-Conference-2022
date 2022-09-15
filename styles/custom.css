@@ -82,3 +82,7 @@ del {
   margin-top: 60px;
   height: 500px;
 }
+
+pre .prefix {
+  color: #aaaaaa;
+}
